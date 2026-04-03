@@ -10,17 +10,29 @@
   <div class="container">
     <h1>Student To-Do App</h1>
 
-    <div class="todo-input">
-      <input type="text" id="taskInput" placeholder="Enter a task..." />
-      <button id="addBtn">Add</button>
+    <div class="assignment-form">
+      <input type="text" id="taskInput" placeholder="Assignment title" />
+      <input type="date" id="dueDateInput" />
+
+      <select id="priorityInput">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <textarea id="notesInput" placeholder="Notes"></textarea>
+
+      <button type="button" onclick="addAssignment()">Add Assignment</button>
+
+      <select id="priorityFilter">
+        <option value="all">All Priorities</option>
+        <option value="high">High Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="low">Low Priority</option>
+      </select>
     </div>
 
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="completed">Completed</button>
-    </div>
-
-    <ul id="taskList"></ul>
+    <div id="taskList"></div>
   </div>
 
   <script src="script.js"></script>
